@@ -27,15 +27,23 @@ export default function About() {
         <div className="about-grid">
           <div className="about-text">
             <p>
-              I’m <strong>Ram Baranwal</strong>, a certified AWS Cloud Architect and full-stack developer passionate about building scalable cloud infrastructures and high-performance web applications. I specialize in AWS services (EC2, S3, VPC, Auto Scaling, Docker) and the MERN stack (React, Node.js, MongoDB), with a strong focus on system design, performance optimization, and clean architecture.
+              I’m <strong>Ram Baranwal</strong>, an aspiring cloud architect and full-stack developer passionate about building scalable cloud infrastructures and high-performance web applications. I have completed AWS Academy training, gaining hands-on experience in cloud computing.
             </p>
             <p>
-              I have solved 350+ coding problems and consistently sharpen my problem-solving and analytical thinking skills. Along with achieving top positions in national hackathons, I enjoy tackling complex challenges and continuously learning new technologies to stay ahead in the evolving tech landscape. My goal is to write clean, efficient, and maintainable code while building reliable solutions that create real-world impact.
+              I work with AWS services such as EC2, S3, VPC, Auto Scaling, and Docker, along with the MERN stack (React, Node.js, MongoDB). My focus is on system design, performance optimization, and writing clean, maintainable code.
+            </p>
+            <p>
+              I am continuously developing strong problem-solving skills, demonstrated by securing top positions in national-level hackathons while tackling real-world challenges.
+            </p>
+            <p>
+              I am driven by continuous learning and aim to build scalable, reliable solutions that create meaningful impact.
             </p>
           </div>
 
           <div className="about-image-container">
-            <Lottie animationData={developerAnimation} loop={true} className="about-image" />
+            <div className="about-image-wrapper">
+              <Lottie animationData={developerAnimation} loop={true} className="about-image" />
+            </div>
           </div>
         </div>
       </div>
