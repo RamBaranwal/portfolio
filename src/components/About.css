@@ -33,6 +33,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  box-sizing: border-box;
   padding: 40px;
   border: 1.5px dashed rgba(245, 101, 57, 0.4); /* Nice dashed orange border to give a tech feel */
   border-radius: 40px; /* Fully rounded modern corners */
@@ -66,5 +67,25 @@
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .about-image-container {
+    padding: 20px;
+    border-radius: 28px;
+  }
+
+  .about-image {
+    transform: translateY(0);
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-image-container {
+    padding: 16px;
+  }
+
+  .about-image {
+    max-height: 260px;
   }
 }
