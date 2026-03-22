@@ -1,0 +1,281 @@
+.hero-split {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #212121;
+  /* Right side background fallback */
+}
+
+/* Left Panel - Theme Orange */
+.hero-left-panel {
+  width: 35%;
+  background-color: #f56539;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 50px;
+}
+
+.social-list {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-list li a {
+  display: block;
+  font-size: 2.2rem;
+  color: #111111;
+  /* Black icons */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-list li a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+/* Overlapping Circular Image */
+.profile-container {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  /* Exactly on the dividing line between 35% and 65% */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background-color: #212121;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container.profile-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Right Panel - Dark */
+.hero-right-panel {
+  width: 65%;
+  background-color: #212121;
+  /* Dark exact from reference */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 80px 40px 230px;
+  /* Exta left padding to make room for profile image */
+}
+
+.hero-content-wrapper {
+  max-width: 550px;
+  width: 100%;
+  text-align: left;
+}
+
+.hero-role-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #d1d5db;
+  /* Light grey */
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.hero-main-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero-main-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #9ca3af;
+  /* Softer gray text */
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-action-buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 36px;
+  border-radius: 50px;
+  /* Fully rounded capsule */
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: none;
+  text-decoration: none;
+}
+
+/* Merged Download & View Button - Outline */
+.btn-hero-merged {
+  display: inline-flex;
+  align-items: stretch;
+  /* To ensure links span full height */
+  border: 1.5px solid #f56539;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn-hero-merged:hover {
+  box-shadow: 0 4px 14px rgba(245, 101, 57, 0.15);
+}
+
+.btn-merged-part {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f56539;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+/* Text heavy side */
+.btn-part-download {
+  padding: 12px 32px;
+  /* Slight extra padding visually balances it */
+}
+
+/* Icon only side */
+.btn-part-view {
+  padding: 12px 24px;
+}
+
+.btn-merged-part:hover {
+  background: rgba(245, 101, 57, 0.1);
+}
+
+/* Making the divider "small" and vertically centered */
+.btn-merged-divider {
+  width: 1.5px;
+  height: 24px;
+  background-color: #f56539;
+  opacity: 0.5;
+  /* A bit softer for an elegant UI feel */
+  margin: auto 0;
+  /* Vertically centers the short divider within the stretched parent */
+  border-radius: 2px;
+}
+
+.btn-icon-eye {
+  font-size: 1.3rem;
+  margin-top: 1px;
+}
+
+/* Solid Fill -> for Contact */
+.btn-hero-fill {
+  background: #f56539;
+  color: #1a1a1a;
+  border: 1.5px solid #f56539;
+  font-weight: 500;
+}
+
+.btn-hero-fill:hover {
+  background: #e0532b;
+  border-color: #e0532b;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .profile-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-right-panel {
+    padding-left: 175px;
+  }
+
+  .hero-main-name {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-right-panel {
+    padding-left: 135px;
+  }
+
+  .hero-main-name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-split {
+    flex-direction: column;
+  }
+
+  .hero-left-panel {
+    width: 100%;
+    min-height: 40vh;
+    padding: 30px;
+    align-items: flex-start;
+  }
+
+  .hero-right-panel {
+    width: 100%;
+    min-height: 60vh;
+    padding: 120px 30px 40px;
+    text-align: center;
+  }
+
+  .profile-container {
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-content-wrapper {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .social-list {
+    margin: 0 auto;
+  }
+
+  .hero-action-buttons {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,146 @@
+.skills {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  overflow: hidden;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  /* Dark */
+}
+
+.skills.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-header-block {
+  margin-bottom: 40px;
+}
+
+.skills-header-block .section-title {
+  margin-bottom: 0.5rem;
+  color: #f56539;
+  /* Signature orange accent color */
+}
+
+.skills-header-block .section-subtitle {
+  margin-bottom: 0;
+  color: #a0a0a0;
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* 2/3 layout on Left, 1/3 layout on Right */
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.skills-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skill-category-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-category-title {
+  font-size: 1.15rem;
+  color: #f56539;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 8px;
+}
+
+.skills-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  cursor: default;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpItem 0.6s forwards;
+  animation-play-state: paused;
+}
+
+.skills.visible .skill-chip {
+  animation-play-state: running;
+}
+
+.skill-chip:hover {
+  color: var(--text-primary);
+  border-color: #f56539;
+  box-shadow: 0 4px 15px rgba(245, 101, 57, 0.15);
+  transform: translateY(-4px);
+  background-color: rgba(245, 101, 57, 0.05);
+}
+
+.skill-chip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Right Side Sphere */
+.skills-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.sphere-wrapper {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  /* Retain mouse tracking logic while locking SVG into pure white format */
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+}
+
+.loading-sphere {
+  color: #f56539;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeUpItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .skills-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}

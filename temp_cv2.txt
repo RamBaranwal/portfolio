@@ -1,0 +1,63 @@
+Ram Baranwal
+LinkedIn:https://www.linkedin.com/in/ram-baranwal/               Email: rambaranwal644@gmail.com
+GitHub: https://github.com/RamBaranwal                               Mobile: +91-9919799661
+S
+KILLS
+Languages:             Java,JavaScript,Python, React.js,HTML,CSS
+Cloud Technologies:    AWS - EC2, S3, RDS, VPC, IAM, ALB, Auto Scaling
+Platforms:             Git / GitHub, Docker, Kubernetes, Linux, Apache NetBeans
+Databases:             MySQL,SQL
+Soft Skills:           ProblemSolving,Adaptability,TeamPlayer,TimeManagement
+P
+ROJECTS
+Scalable Food Delivery Tracking System                                            Feb2025
+•  Engineered a resilient multi-tier cloud architecture on AWS delivering continuous uptime and operational stability.
+•  Provisioned and administered VPC, EC2, RDS, S3, Application Load Balancer, Auto Scaling groups, and IAM
+policies to establish a secure and elastic environment.
+•  Accelerated system responsiveness by shifting static content to Amazon S3 and distributing traffic efficiently
+through load balancing mechanisms.
+•  Structured the platform to support 1,000+ simultaneous requests while maintaining reliability and reduced service
+interruptions.
+•  Tech: AWS Services.
+Monitoring Dashboard | GitHub                                             Jan 2025
+•  Built a live monitoring solution to observe CPU and memory consumption with precise tracking capabilities.
+•  Presented dynamic system statistics using Python tools including Matplotlib and Ps-util for meaningful graphical
+representation.
+•  Enabled administrative controls such as manual updates and task termination to strengthen operational oversight.
+•  Increased diagnostic efficiency through continuous metric streaming and clear visual dashboards.
+•  Tech: Python + Libraries.
+Weather Forecast | GitHub |Live                                        Aug2024
+•  Designed and implemented a mobile-optimized web platform delivering instant weather insights through a clean
+interface.
+•  Connected to an external weather service API to retrieve current temperature, humidity levels, and forecast
+information.
+•  Enforced strict input sanitization to eliminate malformed requests and enhance data reliability.
+•  Refined usability with a device-adaptive layout ensuring smooth functionality across various screen sizes.
+•  Tech: HTML, CSS, JavaScript.
+T
+RAINING
+Application Development in Java | Cipher School |GitHub |Certificate                Jul 2025
+•  Developed a Java Swing–based desktop application with an interactive and user-friendly graphical interface.
+•  Designed and organized student registration and book inventory management modules for efficient data handling.
+•  Integrated MySQL for reliable data persistence and seamless database connectivity using JDBC.
+•  Improved application stability and robustness through comprehensive exception handling and input validation
+mechanisms.
+•  Tech: Java, MySQL, Apache NetBeans.
+C
+ERTIFICATES
+AWS Academy Graduate - Cloud Architecting - Training Badge | AWSCertificate               Jan 2026
+Oracle Certified Foundations Associate | OracleCertificate                             Oct2025
+AWS Academy Graduate - Cloud Foundations - Training Badge | AWSCertificate               Jun 2025
+A
+CHIEVEMENTS
+Solved 350+ coding problems across multiple platforms (tracked on Cod-olio) |Platform
+Placed in the top 5 position in MAIT 4.0 Hackathon (Integrated Voting System) |Certificate
+E
+DUCATION
+Lovely Professional University                                                        Punjab,India
+Bachelor of Technology | CSE | CGPA: 7.7                                  Aug 2023 - Present
+Decent School Kota                                                                 Rajasthan, Kota
+Intermediate | Percentage: 72%                                        Apr 2022 - Mar 2023
+Sunbeam School                                                              UttarPradesh,Azamgarh
+Matriculation | Percentage: 86%                                        Apr 2019 - Mar 2020
+----------------Page (0) Break----------------

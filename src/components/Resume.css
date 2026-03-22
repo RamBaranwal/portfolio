@@ -1,0 +1,160 @@
+.education {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  background-color: var(--bg-tertiary);
+}
+
+.education.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-layout {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.education-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+.education-image img {
+  width: 100%;
+  max-width: 480px;
+  filter: drop-shadow(0 15px 35px rgba(245, 101, 57, 0.15));
+}
+
+.education-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.edu-card {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  background-color: #111111;
+  padding: 16px 20px; /* Reduced vertical padding */
+  border-radius: 20px; /* Highly rounded pill-like corners */
+  border-left: 4px solid #f56539; /* Restored left border highlight */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideInRight 0.6s forwards;
+  animation-play-state: paused;
+}
+
+.education.visible .edu-card {
+  animation-play-state: running;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(245, 101, 57, 0.2);
+}
+
+.edu-card-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Connecting line segment */
+.edu-card-icon::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: -36px; /* Adjusted due to sleeker cards */
+  width: 2px;
+  background: rgba(245, 101, 57, 0.2);
+  z-index: 0;
+}
+
+.edu-card:last-child .edu-card-icon::after {
+  display: none;
+}
+
+.icon-circle {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(245, 101, 57, 0.1);
+  border: 4px solid #f56539;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+}
+
+.edu-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.edu-year {
+  display: inline-block;
+  color: #f56539; /* Simple text without pill to save height */
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.edu-degree {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.edu-school {
+  font-size: 0.95rem;
+  color: #a3a3a3;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.edu-score {
+  font-size: 0.85rem;
+  color: #dddddd;
+  font-weight: 600;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 992px) {
+  .education-layout {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .education-image {
+    order: -1;
+  }
+  .edu-card-icon::after {
+    bottom: -48px;
+  }
+}

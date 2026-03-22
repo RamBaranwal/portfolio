@@ -1,0 +1,271 @@
+.achievements {
+  background: var(--bg-tertiary);
+  /* opacity: 0; */
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.achievement-card {
+  display: flex;
+  flex-direction: column;
+  background: #111111;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  /* very subtle border */
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 1;
+  /* Was animated before, keeping fully visible here */
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(245, 101, 57, 0.3);
+  /* Subtle orange/gold border on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    /* Drop shadow */
+    0 0 20px rgba(245, 101, 57, 0.1) inset;
+  /* Subtle inner orange/gold glow */
+  background: rgba(26, 26, 26, 0.8);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1f140b, #33200b);
+  /* Gold/orange tinted dark block */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  border: 1px solid rgba(245, 101, 57, 0.2);
+}
+
+.card-logo-icon {
+  font-size: 28px;
+  color: #fbbf24;
+  /* Gold/Orange */
+}
+
+.card-title-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-platform {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  line-height: 1;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Middle Row */
+.card-stats-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-box {
+  flex: 1;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-right {
+  background: rgba(245, 101, 57, 0.05);
+  /* Tinted background */
+  border: 1px solid rgba(245, 101, 57, 0.1);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.stat-value.highlight {
+  color: #f56539;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  font-weight: 500;
+}
+
+.stat-label.highlight-label {
+  color: rgba(245, 101, 57, 0.8);
+}
+
+/* Bottom Section */
+.card-breakdown {
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: auto;
+}
+
+.breakdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.breakdown-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.breakdown-total {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: #a3a3a3;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.breakdown-bar-container {
+  display: flex;
+  height: 6px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.breakdown-bar {
+  height: 100%;
+}
+
+.breakdown-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Responsive Handling */
+@media (max-width: 1200px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skeletons and Loading States */
+.skeleton-card {
+  pointer-events: none;
+  gap: 20px;
+}
+
+.skeleton-pulse {
+  background: linear-gradient(90deg, #1f1f1f 25%, #2a2a2a 50%, #1f1f1f 75%);
+  background-size: 200% 100%;
+  animation: skelLoading 1.5s infinite linear;
+  border-radius: 12px;
+}
+
+@keyframes skelLoading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skel-header {
+  height: 60px;
+  width: 60%;
+  margin-bottom: 4px;
+}
+
+.skel-row {
+  height: 90px;
+  width: 100%;
+}
+
+.skel-breakdown {
+  height: 120px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.error-state {
+  justify-content: center;
+  gap: 20px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}

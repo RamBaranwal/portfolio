@@ -1,0 +1,187 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 30px 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 15px 40px;
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111111 !important; /* Force completely black to contrast orange left block */
+  text-decoration: none;
+  letter-spacing: -2px;
+  transition: color 0.3s ease;
+}
+
+.logo-bracket, .logo-text {
+  color: #111111;
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .navbar-logo {
+  color: #ffffff !important;
+}
+
+.navbar.scrolled .logo-bracket, 
+.navbar.scrolled .logo-text {
+  color: #ffffff;
+}
+
+.menu-toggle {
+  background: none;
+  color: #ffffff; /* White exactly on the dark gray reference */
+  font-size: 2rem; /* Make it a bit chunkier */
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s ease, color 0.2s;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+  color: #f56539; /* Theme orange hover */
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background: #111111;
+  z-index: 999;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-shadow: 20px 0 50px rgba(0,0,0,0.5);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white; /* In sidebar it should be white */
+}
+
+.sidebar-logo .logo-bracket,
+.sidebar-logo .logo-text {
+  color: white;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #a3a3a3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+  color: white;
+  background: #f56539;
+  padding-left: 30px;
+}
+
+/* Horizontal Desktop nav-menu */
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #a3a3a3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #f56539;
+}
+
+/* Responsive visibility */
+@media (min-width: 993px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+}

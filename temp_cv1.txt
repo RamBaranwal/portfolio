@@ -1,0 +1,60 @@
+Ram Baranwal 
+Azamgarh ,  Uttar  Pradesh   276125 
+ +91 9919799661          rambaranwal644 @gmail.com          https://www.linkedin.com/in/ram-baranwal         https://github.com/RamBaranwal 
+Projects    
+   To -Do List App Deployment on AWS with Docker           | MERN Stack,    AWS, Docker                                                                  Mar   202 6  
+     Engineered a To -Do List web application and containerized it using Docker for consistent, scalable, and portable           
+deployment  across environments   
+     Provisioned and deployed the application on an AWS Ubuntu server, utilizing optimized configuration, environment setup, 
+and container runtime processes     
+     Leveraged GitHub for version control and Git Bash for streamlined command       -line oper ations, enabling  smooth  code 
+integration and remote connectivity    
+     Configured Docker networking to expose the application on port 80, ensuring secure and reliable public access via                       
+the AWS instance  
+     Repository     Link:   https://github.com/RamBaranwal/aws-first-project 
+   Hospital Management System         | MongoDB  ,  REST APIs   , Responsive Web Application                                                             Feb 2026    
+     Developed a Hospital Management System with      separate Doctor and Patient portals, enabling role     -based access and 
+streamlined appointment workflows     
+     Implemented secure authentication with credential     -based login, managing user and appointment data efficiently using 
+MongoDB  
+     Enabled patients to explore de   partments, select doctors, and schedule appointments based on real       -time availability   
+     Established a dynamic workflow where doctors can approve, reject, or complete appointments with instant updates 
+reflected in the patient portal    
+      Repository Link:      
+https://github.com/RamBaranwal/hospital 
+ 
+Scalable Food Delivery Tracking System            | AWS  S ervices, Linux                                                                                                    Feb   2025   
+     Architected a resilient multi    -tier cloud infrastructure on AWS to ensure high       availability and strong fault tolerance      
+     Set up core services including VPC, EC2, RDS, S3, Application Load Balancer, Auto Scaling, and IAM for a secure and                    
+scalable ecosystem 
+     Enhanced performance by offloading static assets to Amazon S3 and optimizing traffic distribution through load      
+balancing 
+     Designed the system to handle 1,000+ concurrent requests while minimizing downtime and maintaining operational 
+stability  
+Training   
+   Application Development in Java          | Java, MySQL, Apache NetBeans                                                                                       Jul 2025    
+     Built a Java Swing  –based desktop application featuring an intuitive and user      -friendly graphical interface    
+     Structured student registration and book inventory modules to improve data organization and processing efficiency             
+     Integrated MySQL for reliab   le data persistence with seamless database connectivity using JDBC        
+     Strengthened application reliability through effective exception handling and robust input validation techniques            
+     Repository Link:      https://github.com/RamBaranwal/Updated-LMS 
+Certificat    es  
+ AWS  Academy Graduate      - Cloud Architecting     - Training Badge                                                                                              Jan   202 6  
+ AWS Academy     —  Certificate 
+ Oracle Certified Foundations Associate                                                                                                                                                        Oct    202 5  
+  Oracle    —   Certificate  
+  AWS    Academy Graduate           -   Cloud    Foundations       -   Training Badge                                                                                               Jun 2025   
+ AWS Academy   —  Certificate 
+Skills    
+    Languages    :                                   Java,   JavaScript   , Python    
+    Technologies/Frameworks       :    AWS,   Docker  , React   JS,  Node  JS,  Git,  GitHub,   Linux, Ubuntu    
+    Data b ase :                                       MySQL, MongoDB        
+   Domain Skills:                                  Data Structures and Algorithms, Problem         -Solving, Cloud Computing        
+Education    
+Lovely   Professional    University                                                                                                                     202 3 – Present   
+Bachelor of Technology     in  Computer Science and Engineering       —   CGPA:   7.77                                                            Phagwara  , Punjab  
+Decent School                                                                                                                                                          20 22   –  20 23  
+12th   —  Percentage: 72.60%                                                                                                                                                               Rajasthan, Kota 
+Sunbeam School                                                                                                                                                     20 19   –  20 20  
+10th   —   Percentage: 86.40%                                                                                                                                                Azamgarh,   Uttar   Pradesh  
+----------------Page (0) Break----------------

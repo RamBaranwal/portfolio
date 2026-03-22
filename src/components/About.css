@@ -1,0 +1,61 @@
+.about {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center; /* This perfectly centers the animation with the text vertically */
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: #f56539; /* Ensure the bold text uses the portfolio theme */
+}
+
+/* Adding the framed border and lines to the container */
+.about-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
+  border: 1.5px dashed rgba(245, 101, 57, 0.4); /* Nice dashed orange border to give a tech feel */
+  border-radius: 40px; /* Fully rounded modern corners */
+  background: rgba(245, 101, 57, 0.02); /* Slight orange glow inside */
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+  max-width: 100%;
+  max-height: 400px;
+  filter: drop-shadow(0 15px 35px rgba(245, 101, 57, 0.25)); /* Orange drop shadow fitting the theme */
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
