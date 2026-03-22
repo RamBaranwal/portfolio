@@ -185,3 +185,22 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .navbar.scrolled {
+    padding: 12px 20px;
+  }
+
+  .navbar-logo {
+    font-size: 1.6rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+    padding: 6px;
+  }
+}

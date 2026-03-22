@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 80px 40px 230px;
+  padding: 40px clamp(24px, 6vw, 80px) 40px clamp(160px, 22vw, 230px);
   /* Exta left padding to make room for profile image */
 }
 
@@ -96,7 +96,7 @@
 
 .hero-main-name {
   font-family: 'Inter', sans-serif;
-  font-size: 4rem;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 24px;
@@ -116,6 +116,7 @@
 .hero-action-buttons {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .btn-hero {
@@ -247,7 +248,7 @@
   .hero-left-panel {
     width: 100%;
     min-height: 40vh;
-    padding: 30px;
+    padding: 110px 30px 30px;
     align-items: flex-start;
   }
 
@@ -276,6 +277,41 @@
   }
 
   .hero-action-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left-panel {
+    padding: 90px 20px 20px;
+  }
+
+  .social-list {
+    gap: 18px;
+  }
+
+  .social-list li a {
+    font-size: 1.9rem;
+  }
+
+  .hero-role-title {
+    font-size: 1rem;
+  }
+
+  .hero-main-desc {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .btn-hero,
+  .btn-hero-merged {
+    width: 100%;
     justify-content: center;
   }
 }
