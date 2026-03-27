@@ -32,7 +32,7 @@ export default function Loader({ onLoadingComplete }) {
         <span className={`loader-text text-left ${phase === 'all-at-once' ? 'fade-out' : ''}`}>cloud computing</span>
       </div>
       <div className="loader-panel loader-right">
-        <span className={`loader-text text-right ${phase === 'all-at-once' ? 'fade-out' : ''}`}>devloper</span>
+        <span className={`loader-text text-right ${phase === 'all-at-once' ? 'fade-out' : ''}`}>developer</span>
       </div>
 
       <div className={`loader-circle-container ${phase === 'all-at-once' ? 'move-to-hero' : ''}`}>
