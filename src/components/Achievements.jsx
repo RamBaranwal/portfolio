@@ -39,12 +39,12 @@ const profileConfigs = [
       // Mock fetch with delay
       await new Promise(resolve => setTimeout(resolve, 800));
       return {
-        box1Value: '150+',
+        box1Value: '80+',
         box2Value: '50',
-        total: '150 / 800',
-        easy: { count: 60, color: '#10b981' },
-        medium: { count: 70, color: '#fbbf24' },
-        hard: { count: 20, color: '#ef4444' }
+        total: '80 / 800',
+        easy: { count: 53, color: '#10b981' },
+        medium: { count: 30, color: '#fbbf24' },
+        hard: { count: 2, color: '#ef4444' }
       };
     }
   },
