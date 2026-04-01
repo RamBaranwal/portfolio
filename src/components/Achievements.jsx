@@ -43,7 +43,7 @@ const profileConfigs = [
         box2Value: '50',
         total: '80 / 800',
         easy: { count: 53, color: '#10b981' },
-        medium: { count: 30, color: '#fbbf24' },
+        medium: { count: 25, color: '#fbbf24' },
         hard: { count: 2, color: '#ef4444' }
       };
     }
