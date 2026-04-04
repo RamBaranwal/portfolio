@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SiLeetcode, SiHackerrank } from 'react-icons/si';
-import { FaCode, FaFire } from 'react-icons/fa';
+import { FaCode, FaFire, FaExternalLinkAlt } from 'react-icons/fa';
 import './Achievements.css';
 
 const profileConfigs = [
@@ -184,6 +184,11 @@ function AchievementCard({ config }) {
           </div>
         </div>
       </div>
+
+      <span className="click-hint" aria-hidden="true">
+        <FaExternalLinkAlt className="click-hint-icon" />
+        <span className="click-hint-text">Click to view</span>
+      </span>
     </a>
   );
 }

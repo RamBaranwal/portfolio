@@ -12,6 +12,7 @@
 .achievement-card {
   display: flex;
   flex-direction: column;
+  position: relative;
   background: #111111;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -19,6 +20,8 @@
   /* very subtle border */
   border-radius: 16px;
   padding: 24px;
+  padding-bottom: 48px; /* more space so badge doesn't overlap breakdown */
+  overflow: visible;
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
@@ -26,6 +29,50 @@
   animation: fadeInUp 0.6s ease forwards;
   opacity: 1;
   /* Was animated before, keeping fully visible here */
+}
+
+/* Click hint badge to show the card is clickable */
+
+.click-hint {
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  left: auto;
+  transform: none;
+  background: linear-gradient(180deg, rgba(25,25,25,0.96), rgba(18,18,18,0.96));
+  color: #fbbf24;
+  padding: 6px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+  pointer-events: none;
+  z-index: 4;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.45);
+}
+
+.achievement-card:hover .click-hint {
+  transform: translateY(-4px);
+  background: rgba(245, 101, 57, 0.12);
+  color: #fff;
+}
+
+.click-hint-icon {
+  font-size: 0.95rem;
+}
+
+.click-hint-text { line-height: 1; }
+
+@media (max-width: 640px) {
+  .click-hint {
+    bottom: -12px;
+    padding: 6px 8px;
+  }
+  .click-hint-text { display: none; }
 }
 
 .achievement-card:hover {
@@ -43,7 +90,7 @@
 .card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .card-icon-wrapper {
@@ -87,8 +134,8 @@
 /* Middle Row */
 .card-stats-row {
   display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .stat-box {
@@ -96,9 +143,10 @@
   background: #181818;
   border: 1px solid rgba(255, 255, 255, 0.03);
   border-radius: 12px;
-  padding: 16px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
+  min-height: 110px; /* keep boxes visually aligned */
 }
 
 .stat-right {
@@ -137,15 +185,16 @@
   background: #181818;
   border: 1px solid rgba(255, 255, 255, 0.03);
   border-radius: 12px;
-  padding: 16px;
-  margin-top: auto;
+  padding: 14px;
+  margin-top: 12px;
+  margin-bottom: 22px; /* reserve space under breakdown so badge doesn't overlap */
 }
 
 .breakdown-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .breakdown-title {
@@ -188,30 +237,15 @@
   align-items: center;
   gap: 6px;
 }
-
 .legend-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
-
 .legend-count {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   font-family: 'Fira Code', monospace;
-}
-
-/* Responsive Handling */
-@media (max-width: 1200px) {
-  .achievements-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Skeletons and Loading States */
