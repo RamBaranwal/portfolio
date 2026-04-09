@@ -192,3 +192,32 @@
     gap: 40px;
   }
 }
+
+@media (max-width: 640px) {
+  /* Ensure the contact section has safe padding on phones */
+  .contact .container {
+    padding-left: calc(16px + env(safe-area-inset-left));
+    padding-right: calc(16px + env(safe-area-inset-right));
+  }
+
+  .contact-grid {
+    gap: 24px;
+  }
+
+  /* Make submit button full width to avoid overflow and touching edges */
+  .btn-submit {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 18px;
+  }
+
+  /* Reduce card padding so it fits nicely with container spacing */
+  .contact-info-card {
+    padding: 14px 16px;
+  }
+
+  /* Avoid hover translate causing overflow on narrow screens */
+  .contact-info-card:hover {
+    transform: none;
+  }
+}

@@ -67,12 +67,56 @@
 
 .click-hint-text { line-height: 1; }
 
-@media (max-width: 640px) {
-  .click-hint {
-    bottom: -12px;
-    padding: 6px 8px;
+@media (max-width: 900px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .click-hint-text { display: none; }
+}
+
+@media (max-width: 640px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Add safe padding so cards don't touch device edges on phones */
+  .achievements .container {
+    padding-left: calc(16px + env(safe-area-inset-left));
+    padding-right: calc(16px + env(safe-area-inset-right));
+  }
+
+  .achievement-card {
+    padding: 16px;
+    padding-bottom: 56px;
+  }
+
+  .card-stats-row {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .stat-box {
+    min-height: auto;
+    padding: 14px;
+  }
+
+  .card-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+
+  .click-hint {
+    bottom: 14px;
+    right: 14px;
+    left: auto;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+
+  /* Ensure the hint text is visible on small screens */
+  .click-hint-text { display: inline; }
 }
 
 .achievement-card:hover {
