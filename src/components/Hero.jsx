@@ -4,9 +4,9 @@ import './Hero.css';
 
 export default function Hero({ loadingComplete = true }) {
   const socialLinks = [
-    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/ram-baranwal/', label: 'LinkedIn' },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/rambaranwal01/', label: 'LinkedIn' },
     { icon: <FaGithub />, url: 'https://github.com/RamBaranwal', label: 'GitHub' },
-    { icon: <FaEnvelope />, url: 'mailto:rambaranwalup50@gmail.com', label: 'Email' },
+    { icon: <FaEnvelope />, url: 'mailto:rambaranwal644@gmail.com', label: 'Email' },
   ];
 
   return (
